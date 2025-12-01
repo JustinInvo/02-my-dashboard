@@ -1,6 +1,5 @@
-import { PokemonsResponse, SimplePokemon } from "@/app/pokemons"
-import { PokemonGrid } from "@/app/pokemons/components/PokemonGrid"
-import Image from "next/image"
+import { PokemonsResponse, SimplePokemon } from "@/pokemons"
+import { PokemonGrid } from "@/pokemons/components/PokemonGrid"
 
 const getPokemons = async( limit= 20, offset = 0): Promise<SimplePokemon[]> => {
   const data:PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
@@ -10,7 +9,7 @@ const getPokemons = async( limit= 20, offset = 0): Promise<SimplePokemon[]> => {
     id: pokemon.url.split('/').at(-2)!,
     name: pokemon.name
   }))
-  throw new Error('Hay un error')
+  // throw new Error('Hay un error')
 
   return pokemons
 }

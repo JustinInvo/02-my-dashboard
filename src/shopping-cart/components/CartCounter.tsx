@@ -11,7 +11,7 @@ export const CartCounter = ({ value = 0 }: Props) => {
 
   return (
     <>
-      <span className="text-9xl"> 10 </span>
+      <span className="text-9xl"> {count} </span>
 
       <div className="flex">
         <button 

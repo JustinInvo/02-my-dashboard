@@ -14,7 +14,6 @@ export const PokemonGrid = ({ pokemons }: Props) => {
           <PokemonCard key={key} pokemon={pokemon}/>
         ))
       }
-      {/* { JSON.stringify(pokemons) } */}
     </div>
   )
 }

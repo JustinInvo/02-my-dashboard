@@ -1,5 +1,5 @@
 import React from 'react'
-import Siderbar from '../components/Siderbar'
+import Siderbar from '../../components/Siderbar'
 
 export default function Dashboardlayout({
   children
