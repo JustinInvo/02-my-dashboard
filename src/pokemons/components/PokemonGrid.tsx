@@ -9,10 +9,11 @@ interface Props {
 export const PokemonGrid = ({ pokemons }: Props) => {
   return (
     <div className="flex flex-wrap gap-10 items-center justify-center">
-      {
+      {pokemons ?
         pokemons.map( (pokemon, key) => (
           <PokemonCard key={key} pokemon={pokemon}/>
         ))
+        : <p>No hay pokémons favoritos</p>
       }
     </div>
   )
